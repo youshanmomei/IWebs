@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fillet</title>
+
+    <style>
+        .demo {
+            width: 100px;
+            height: 50px;
+            background-color: lightgreen;
+        }
+        .demo:first-child {
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .demo:last-child {
+            margin-bottom: 20px;
+            border-radius: 0px 10px 10px 30px / 30px 10px 10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo"></div>
+    <div class="demo"></div>
+</body>
+</html>

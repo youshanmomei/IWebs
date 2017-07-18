@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D-translate-scale3d</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: lightgray;
+        }
+        .content {
+            background-color: #53ad26;
+            color: #ffffff;
+            width: 160px;
+            height: 30px;
+        }
+        .perspective {
+            perspective: 2000px; /* 3D元素距视图的距离，此设定与y轴有关 */
+        }
+        /*
+            scale-3d可以分别为x、y、z轴设置缩放
+        */
+        .scale3d1 {
+            -webkit-transform: scale3d(2, 2, 2);
+            -moz-transform: scale3d(2, 2, 2);
+            -ms-transform: scale3d(2, 2, 2);
+            -o-transform: scale3d(2, 2, 2);
+            transform: scale3d(2, 2, 2);
+        }
+        .scale3d2 {
+            -webkit-transform: translateZ(200px);
+            -moz-transform: translateZ(200px);
+            -ms-transform: translateZ(200px);
+            -o-transform: translateZ(200px);
+            transform: translateZ(200px);
+        }
+        .scale3d3 {
+            -webkit-transform: scale3d(2, 2, 2) translateZ(150px);
+            -moz-transform: scale3d(2, 2, 2) translateZ(150px);
+            -ms-transform: scale3d(2, 2, 2) translateZ(150px);
+            -o-transform: scale3d(2, 2, 2) translateZ(150px);
+            transform: scale3d(2, 2, 2) translateZ(150px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container perspective">
+        <div class="content scale3d1">scale3d</div>
+    </div>
+    <div class="container perspective">
+        <div class="content scale3d2">scale3d</div>
+    </div>
+    <div class="container perspective">
+        <div class="content scale3d3">scale3d</div>
+    </div>
+    <pre>
+        scale3d3中z轴缩放为原来的2倍，向观察者移动了200px。因此实则移动了400px。
+    </pre>
+</body>
+</html>

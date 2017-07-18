@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D-translate-透视</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: lightgray;
+        }
+        .content {
+            background-color: #53ad26;
+            color: #ffffff;
+            width: 160px;
+            height: 30px;
+        }
+        .perspective {
+            perspective: 500px; /* 3D元素距视图的距离 */
+        }
+        .translate3d1 {
+            -webkit-transform: translate3d(10px, 20px, 100px);
+            -moz-transform: translate3d(10px, 20px, 100px);
+            -ms-transform: translate3d(10px, 20px, 100px);
+            -o-transform: translate3d(10px, 20px, 100px);
+            transform: translate3d(10px, 20px, 100px);
+            /* 向右偏移10px，向下偏移20px，z轴（观察者的正方向为正向），靠近观察者100px */
+        }
+        .translate3d2 {
+            -webkit-transform: translate3d(10, 20px, -100px);
+            -moz-transform: translate3d(10, 20px, -100px);
+            -ms-transform: translate3d(10, 20px, -100px);
+            -o-transform: translate3d(10, 20px, -100px);
+            transform: translate3d(10, 20px, -100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">默认效果</div>
+    </div>
+    <div class="container perspective">
+        <div class="content translate3d1">有透视</div>
+    </div>
+    <div class="container">
+        <div class="content translate3d2">无透视</div>
+    </div>
+</body>
+</html>

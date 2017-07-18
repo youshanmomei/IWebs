@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/*
+* reset
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei UI", "微软雅黑";
+}
+p{
+    font-size: 18px;
+    line-height: 30px;
+    color: #333;
+}
+ul {
+    list-style: none;
+}
+p *{
+    font-size:inherit;
+    color: inherit;
+}
+a, a:hover {
+    text-decoration: none;
+    color: #333;
+}
+/*
+* common
+ */
+.text-center {
+    text-align: center;
+}
+.list_list_title {
+    color: #000;
+    font-size: 24px;
+}
+.color_red {
+    color: #e00815;
+}
+.font_size16 {
+    font-size: 16px;
+}
+.clear_fix {
+    clear: both;
+}
+/** 从设计稿中测量得到的内容区域 **/
+.g-content {
+    width: 1004px;
+    margin: 0 auto;
+}
+/*两列布局的方法*/
+.common-left {
+    float: left;
+}
+.common-right {
+    overflow: hidden;
+}
+/*全局页头*/
+.g-header {
+    height: 96px;
+    overflow: hidden;
+}
+.g-nav, .nav-container, .login-wrap, .nav-list-wrap, .nav-form {
+    height: 100%;
+}
+/*Logo向左浮动*/
+.logo-wrap {
+    padding-top:25px;
+    float: left;
+}
+/*导航列向右浮动，其后代元素继承text-align*/
+.nav-list-wrap {
+    float: right;
+    text-align: center;
+}
+.nav-list li, .nav-list a {
+    display: inline-block;
+}
+.nav-list a {
+    line-height:96px;
+    padding:0 24px;
+}
+.nav-list a:hover, .nav-list, .active {
+    color: #63ba38;
+}
+.nav-list-wrap {
+    width: 800px;
+}
+.nav-list {
+    float: left;
+}
+.nav-form {
+    float: right;
+    padding: 24px 0 13px;
+}
+.nav-link-wrap {
+    padding-left: 30px;
+    height: 100%;
+    border-left: 1px solid #dddddd;
+}
+.nav-link-wrap a {
+    font-size: 14px;
+}
+.divide{
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    margin: 0 16px;
+    background-color: #333;
+    vertical-align: middle;
+}
+
+/*
+* 全局页脚
+*/
+footer {
+    background-color: #424242;
+    padding-top: 40px;
+    height: 260px;
+}
+.footer-list {
+    width: 980px;
+    margin: 0 auto;
+    list-style: none;
+    clear: both;
+}
+.footer-list li{
+    display: inline-block;
+    float: left;
+    width: 180px;
+    text-align: left;
+    padding-left: 30px;
+}
+.footer-list a:hover {
+    color: #fdf400;
+}
+.f_5 {
+    padding-top: 10px;
+}
+.f_5 img {
+    width: 160px;
+    height: auto;
+}
+
+footer a, footer h4 {
+    color: #ffffff;
+}
+footer a:hover {
+    text-decoration: none;
+}
+.copy {
+    clear: both;
+    text-align: center;
+}
+.copy hr{
+    border-color:#313131;
+}
+footer p, .copy p {
+    color:#e8e8e8;
+    font-size: 14px;
+}

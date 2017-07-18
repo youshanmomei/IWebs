@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D-translate-origin</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: lightgray;
+        }
+        .content {
+            background-color: #53ad26;
+            color: #ffffff;
+            width: 160px;
+            height: 30px;
+        }
+        .perspective {
+            perspective: 500px; /* 3D元素距视图的距离 */
+        }
+        .perspective1 {
+            perspective: 500px;
+            perspective-origin: 50% 50%;/* 默认值，正中间的位置*/
+        }
+        .perspective2 {
+            perspective: 500px;
+            perspective-origin: left top; /* 左上角 */
+        }
+        .perspective3 {
+            perspective: 500px;
+            perspective-origin: 50% 200px; /* x轴正中间，y轴（正方向：下）200px 的地方 */
+        }
+        .perspective4 {
+            perspective: 500px;
+            perspective-origin: right; /* x轴最右边，y轴默认50% */
+        }
+        .rotateY {
+            -webkit-transform: rotateY(45deg);
+            -moz-transform: rotateY(45deg);
+            -ms-transform: rotateY(45deg);
+            -o-transform: rotateY(45deg);
+            transform: rotateY(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container perspective">
+        <div class="content rotateY">rotateY</div>
+    </div>
+    <div class="container perspective1">
+        <div class="content rotateY">rotateY</div>
+    </div>
+    <div class="container perspective2">
+        <div class="content rotateY">rotateY</div>
+    </div>
+    <div class="container perspective3">
+        <div class="content rotateY">rotateY</div>
+    </div>
+    <div class="container perspective4">
+        <div class="content rotateY">rotateY</div>
+    </div>
+</body>
+</html>

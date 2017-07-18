@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D-translate</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: lightgray;
+        }
+        .content {
+            background-color: #53ad26;
+            color: #ffffff;
+            width: 160px;
+            height: 30px;
+        }
+        .container-perspective {
+            perspective: 500px;/* 没看出来区别 */
+        }
+        .rotateY {
+            -webkit-transform: rotateY(45deg);
+            -moz-transform: rotateY(45deg);
+            -ms-transform: rotateY(45deg);
+            -o-transform: rotateY(45deg);
+            transform: rotateY(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">无变形</div>
+    </div>
+    <div class="container">
+        <div class="content rotateY">rotateY</div>
+    </div>
+    <div class="container container-perspective">
+        <div class="content rotateY">有透视rotateY</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,349 @@
+@charset "UTF-8";
+/*
+*全局section
+*/
+.section-two,.section-three,.section-four,.section-five,.section-six,.section-seven,.section-eight,.section-nine{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.section-title{
+    color: #333;
+    text-align: center;
+    font-size: 30px;
+}
+.g-section p{
+    margin-bottom: 10px;
+}
+/*one banner*/
+.banner{
+    min-width: 1004px;
+    position: relative;
+}
+.banner img{
+    width: 100%;
+}
+/*two 转个型，还要参加特训营，有必要吗？*/
+.two_title_info{
+    width: 530px;
+    margin: 0px auto;
+    margin-top: -14px;
+}
+
+.two_title_info .caret{
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 0px dashed;
+    border-bottom: 10px dashed #0095ff;
+    display: inline-block;
+    height: 0;
+    margin-left: 50px;
+    vertical-align: bottom;
+    width: 0;
+}
+.two_title_text{
+    background-color: #0095ff;
+    padding: 4px 0;
+    color: #ffffff;
+}
+.two_list{
+    margin-top: 30px;
+}
+.two_list>div{
+    margin-bottom: 20px;
+}
+.two_list_num{	
+    color: #ffffff;
+    display: inline-block;
+    width: 27px;
+    text-align: center;
+}
+.two_list_num1{
+    background-color: #0095ff;
+}
+.two_list_num2{
+    background-color: #ff9833;
+}
+.two_list_num3{
+    background-color: #33a367;
+}
+.two_list_num4{
+    background-color: #383838;
+}
+/* three 经过特训营的训练，你可以达到 */
+.section-three{
+    background-color: #ebebeb;
+}
+.three_list li{
+    height: 200px;
+    width: 224px;
+    border: 1px solid #b5b5b5;
+    display: inline-block;
+    background-color: #ffffff;
+    margin-left: 30px;
+}
+.three_list li:first-child{
+   margin-left: 0;
+}
+.three_list{
+    margin-top: 60px;
+}
+.three_list>li>div>div{
+    width: 80px;
+    height: 80px;
+    background: url("../images/txy_three_s.png") no-repeat;
+    margin-left: 74px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.t_l_i_two{
+    background-position: -95px 0px;
+}
+.t_l_i_three{
+    background-position: -186px 0px;
+}
+.t_l_i_four{
+    background-position: -305px 0px;
+}
+/* four 特训营，训练什么，特在哪里？ */
+.four_list{
+    margin-top: 20px;
+    position: relative;
+}
+.four_list a{
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background-color: #0071c1;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+.four_list a:visited{
+    text-decoration: none;
+    color: #ffffff;
+}
+.four_list a:hover{
+    color: #ffffff;
+}
+/* five 都是哪些老师在研发课程和授课 */
+.section-five{
+    background-color: #ebebeb;
+}
+.five_list{
+    height: 330px;
+    position: relative;
+    margin-left:30px;
+}
+.five_list_head{
+    background-color: #727272;
+    width: 80px;
+    float: left;
+    height: 330px;
+    cursor: pointer;
+}
+.active .five_list_head{
+    background-color: #0083e0;
+}
+.five_list_head p{
+    width: 80px;
+    padding: 30px;
+    color: #ffffff;
+    line-height: 24px;
+}
+.five_list .five_list_body{
+    background-color: #0095ff;
+    width: 690px;
+    height: 330px;
+    display: none;
+    padding-top: 30px;
+    padding-right: 10px;
+}
+.active .five_list_body{
+    display: block;
+}
+.five_list_body p{
+    font-size: 16px;
+    margin-left: 210px;
+    color: #ffffff;
+}
+.five_list_item{
+    position: absolute;
+    top: 0px;
+}
+.five_list_1{
+    left: 0px;
+}
+.five_list_2{
+    left: 698px;
+}
+.five_list_3{
+    left: 788px;
+ }
+.five_list_4{
+    left: 878px;
+}
+.five_list_photo{
+    width: 126px;
+    float: left;
+    padding-left: 20px;
+}
+/* six 老师讲的确实都是干货 */
+.six_list{
+    margin-top: 70px;
+}
+.six_list li{
+    width: 330px;
+    height: 290px;
+    float: left;
+}
+.six_photo{
+    width: 80px;
+    height: 80px;
+    background: url("../images/txy_six_s.png") no-repeat;
+}
+.six_photo1{
+    background-position: 0px -2px;
+}
+.six_photo2{
+    background-position: -330px -2px;
+}
+.six_photo3{
+    background-position: -660px -2px;
+}
+.six_info{
+    width: 80px;
+    float: left;
+}
+.six_text{
+    width: 222px;
+    height: 268px;
+    background: url("../images/txy_six_s.png") -91px -2px no-repeat;
+    margin-left: 90px;
+    padding: 15px;
+    overflow: hidden;
+}
+.six_text1{
+    background-position: -91px -2px;
+}
+.six_text2{
+    background-position: -425px -2px;
+}
+.six_text3{
+    background-position: -754px -2px;
+}
+/* seven 开班时间与上课安排 */
+.section-seven{
+    background-color: #ebebeb;
+}
+.seven_list{
+    margin-top: 30px;
+}
+.seven_list li{
+    width: 320px;
+    height: 160px;
+    display: inline-block;
+    border: 1px solid #b1b1b1;
+    background-color: #ffffff;
+    padding-top: 30px;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+.seven_list li:first-child{
+    margin-left: 0;
+}
+.seven_photo{
+    width: 100px;
+    height: 100px;
+    background: url("../images/txy_seven_s.png") no-repeat;
+    float: left;
+}
+.seven_photo1{
+    background-position: 0px 0px;
+}
+.seven_photo_2{
+    background-position: -115px 0px;
+}
+.seven_photo_3{
+    background-position: -231px 0px;
+}
+.seven_text{
+    margin-left: 110px;
+}
+.bg_red{
+    background-color: #df3434;
+}
+/* eight 大讲台5大承诺 */
+.go_test{
+    color: #ffffff;
+    background-color: #65bb33;
+    padding: 15px 45px;
+    border-radius: 5px;
+}
+.go_test:hover{
+    color: #ffffff;
+}
+ /*nine 学费政策 */
+.section-nine{
+    background-color: #df3434;
+	margin-top:20px;
+}
+p.nine_title{
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.nine-wrap{
+    position: relative;
+}
+.nine_list_wrap>a{
+    padding: 8px 16px;
+    font-size: 18px;
+    background-color: #f0ff00;
+    color: #ae0000;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 27px;
+}
+.nine_list_wrap>a:first-child{
+    margin-left: 0;
+}
+.spark_course{
+    width: 233px;
+    height: 46px;
+    background: url("../images/txy_nine_s.png");
+    position: absolute;
+    top: -30px;
+    right: 0px;
+}
+.nine_list_icon{
+    padding: 6px 7px;
+    background: url("../images/txy_nine_s.png") 0px -46px no-repeat;
+    vertical-align: middle;
+}
+/* 侧边导航 */
+.g-aside{
+    position: fixed;
+    z-index: 9999;
+    top: 100px;
+    left: 50%;
+    margin-left: -622px;
+    background-color: transparent;
+}
+.g-aside li{
+    padding: 8px 10px;
+    border: 1px solid #b2b2b2;
+    margin-bottom:-1px;
+    width: 97px;
+    background-color: #ffffff;
+}
+.g-aside p{
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    height: 100%;
+    margin-bottom: 0;
+}
+.g-aside a{
+    color: #333;
+}
+

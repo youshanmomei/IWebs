@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tra-3</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: lightgray;
+        }
+        .content {
+            width: 200px;
+            height: 30px;
+            background-color: #53ad26;
+            color: #ffffff;
+            text-align: center;
+            line-height: 30px;
+        }
+        .rotate {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .origin1 {
+            transform-origin: 50% 50%;/* 默认值，即元素中心 */
+        }
+        .origin2 {
+            transform-origin: 0 0;/* 元素左上角 */
+        }
+        .origin3 {
+            transform-origin: 10%;/* x轴距离最左边10%，y轴默认为50%*/
+        }
+        .origin4 {
+            transform-origin: right 50px 40px;/* x轴最右边， y轴距最上边50px，z轴距零点40px的地方  非3D，z轴不显示*/
+        }
+        .origin5 {
+            transform-origin: right top 100px;/* y轴最上边，x轴最右边，z轴距离零点40px的地方  非3D，z轴不显示*/
+        }
+    </style>
+</head>
+<body>
+    <h2>设置变形基准点</h2>
+    <div class="container">
+        <div class="content rotate">rotate-base</div>
+    </div>
+    <div class="container">
+        <div class="content rotate origin1">rotate-50% 50%</div>
+    </div>
+    <div class="container">
+        <div class="content rotate origin2">rotate-0 0</div>
+    </div>
+    <div class="container">
+        <div class="content rotate origin3">rotate</div>
+    </div>
+    <div class="container">
+        <div class="content rotate origin4">rotate</div>
+    </div>
+    <div class="container">
+        <div class="content rotate origin5">rotate</div>
+    </div>
+</body>
+</html>

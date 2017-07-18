@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆角2-%</title>
+    <style>
+        .demo {
+            width: 100px;
+            background-color: lightgreen;
+        }
+        .demo:first-child {
+            margin-bottom: 20px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .demo:last-child {
+            margin-bottom: 20px;
+            height: 100px;
+            border-radius: 50%;
+            /* 使文字水平垂直居中 */
+            /* 设定字的行高与边框的元素行高一样，因为元素本身就是行内垂直居中的 */
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo"></div>
+    <div class="demo">文字</div>
+</body>
+</html>

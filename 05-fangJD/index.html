@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fangJD</title>
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    <div class="logo-wrap">
+        <a class="logo"><img src="images/jdlogo.png"></a>
+        <div class="welcome">欢迎注册</div>
+        <div class="login-wrap">已有账号<a>请登录</a></div>
+    </div>
+</div>
+
+<!--内容区-->
+<div class="content">
+    <!--********************************* 注册模块begin *****************************************-->
+    <!--内容区-左侧表单-->
+    <div class="left">
+        <!--内容区-左侧表单-表单容器-->
+        <div class="form-wrap">
+            <!--内容区-左侧表单-表单容器-表单-->
+            <form>
+                <!--内容区-左侧表单-表单容器-表单-表单项容器-->
+                <div class="input-wrap"><label>用&nbsp;户&nbsp;名</label><input type="text" placeholder="您的账户名和用户名"></div>
+                <!--内容区-左侧表单-表单容器-表单-表单项提示容器-->
+                <div class="tip-wrap"></div>
+
+                <div class="input-wrap"><label>设置密码</label><input type="password" placeholder="建议至少使用两种字符组合"></div>
+                <div class="tip-wrap"></div>
+
+                <div class="input-wrap"><label>确认密码</label><input type="password" placeholder="请再次输入密码"></div>
+                <div class="tip-wrap"></div>
+
+                <div class="input-wrap">
+                    <label class="letter-space-fix1">中国+86&nbsp;<a id="dropdown-btn"><img src="images/arrow.png"></a></label>
+                    <input type="text" placeholder="建议使用常用手机号">
+                    <!--下拉列表-->
+                    <ul class="dropdown hide">
+                        <li class="active">中国+86</li>
+                        <li>香港+852</li>
+                        <li>台湾+886</li>
+                    </ul>
+                </div>
+                <div class="tip-wrap"></div>
+
+                <div class="input-wrap">
+                    <label>验&nbsp;证&nbsp;码</label>
+                    <input type="text" class="input-width-fix" placeholder="请输入验证码">
+                    <div class="image-yzm-wrap float-right">
+                        <img src="images/yanzhengma.jpg">
+                    </div>
+                </div>
+                <div class="tip-wrap"></div>
+
+                <div class="input-wrap">
+                    <label class="letter-space-fix1">手机验证码</label>
+                    <input type="text" class="input-width-fix" placeholder="请输入手机验证码">
+                    <div class="msg-yzm-wrap float-right">
+                        <a>获取验证码</a>
+                    </div>
+                </div>
+                <div class="tip-wrap"></div>
+
+                <div>
+                    <input type="checkbox" name="agree" />
+                    我已阅读并同意<a href="#">京东用户注册协议</a>
+                </div>
+                <div class="tip-wrap"></div>
+
+                <button class="submit" type="submit">立即注册</button>
+            </form>
+        </div>
+    </div>
+    <!--********************************* 注册模块end   *****************************************-->
+    <!--内容区-右侧-->
+    <div class="right">
+        <img src="images/meg.png">
+        <div class="company-reg">
+            <img src="images/company.png"><a>企业用户注册</a>
+        </div>
+        <div>
+            <img src="images/earch.png"><a>INTERNATIONAL<br> CUSTOMERS</a>
+        </div>
+    </div>
+</div>
+
+<!--底部-->
+<div class="footer">
+    <div class="footer-con">
+        <ul class="f-list">
+            <li><a>关于我们</a></li>
+            <li><a>联系我们</a></li>
+            <li><a>人才招聘</a></li>
+            <li><a>商家入驻</a></li>
+            <li><a>广告服务</a></li>
+            <li><a>手机京东</a></li>
+            <li><a>友情链接</a></li>
+            <li><a>销售联盟</a></li>
+            <li><a>京东公益</a></li>
+            <li><a>English Site</a></li>
+        </ul>
+        <p class="f-copy">Copyright&copy;2014-2016  京东JD.com 版权所有 </p>
+    </div>
+</div>
+
+<!--下拉列表隐藏显示的方法-->
+<script>
+    //下拉列表隐藏、显示方法
+    var dropBtn = document.querySelector("#dropdown-btn"),
+        drop = document.querySelector(".dropdown");
+
+    dropBtn.onclick=function () {
+        if (drop.className.indexOf("hide")>0) {
+            drop.className = "dropdown";
+        }else {
+            drop.className += " hide";
+        }
+    }
+
+</script>
+
+</body>
+</html>

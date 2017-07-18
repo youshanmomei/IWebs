@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一图多用</title>
+    <style>
+        .wrap {
+            width: 800px;
+            height: 200px;
+            background-color: #8d9929;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+        .wrap1 {
+            width: 150px;
+            height: 195px;
+            border: 1px solid red;
+            overflow: hidden;
+            display: inline-block;
+            margin-right: 100px;
+        }
+        .wrap1:last-child {
+            margin-right: 0px;
+        }
+        .bg {
+            display: inline-block;
+            background-image: url("image/icon.png");
+            background-repeat: no-repeat;
+        }
+        .ph1 {
+            width: 30px;
+            height: 30px;
+            background-position: 0px -290px;
+        }
+        .ph2 {
+            width: 30px;
+            height: 30px;
+            background-position: -48px -290px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="wrap1">
+        <div class="bg ph1"></div>
+        <p>this is the 1th icon</p>
+    </div>
+    <div class="wrap1">
+        <div class="bg ph2"></div>
+        <p>this is the 2th icon</p>
+    </div>
+</div>
+</body>
+</html>

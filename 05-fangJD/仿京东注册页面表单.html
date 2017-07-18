@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>仿京东注册表单</title>
+		<style>
+			/* reset */
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-size: 14px;
+				font-family: "微软雅黑";
+			}
+			a{
+				cursor: pointer;
+			}
+			.float-right{
+				float: right;
+			}
+			.hide{
+				display: none;
+			}
+			/* 头部  */
+			.header{
+				height: 105px;
+				width: 100%;
+				position: relative;
+				box-shadow: 0 0 10px #ccc;
+			}
+			.logo-wrap{
+				width: 1210px;
+				margin: 0 auto;
+			}
+			.logo{
+				display: inline-block;
+				margin-top: 20px;
+				vertical-align: top;
+			}
+			.welcome{
+				display: inline-block;
+				font-size: 20px;
+				line-height: 40px;
+				margin-top: 30px;
+				margin-left: 10px;
+				padding-left: 20px;
+				border-left: 1px solid #ccc;
+			}
+			.login-wrap{
+				float: right;
+				font-size: 18px;
+				color: #999;
+				margin-top: 60px;
+			}
+			.login-wrap>a{
+				margin-left: 10px;
+				color: #333;
+				font-size: 18px;
+			}
+			
+			/* 内容区-右侧 */
+			.content{
+				width: 1210px;
+				margin: 50px auto;
+			}
+			.right{
+				overflow: hidden;
+				padding-left: 90px;
+				border-left: 1px solid #ccc;
+				padding-bottom: 160px;
+			}
+			.right>img{
+				margin-bottom: 40px;
+			}
+			.right>div{
+				clear: both;
+				margin-top: 20px;
+				width: 200px;
+				height: 60px;
+				margin-left: 10px;
+			}
+			.right>div>img{
+				float: left;
+				margin-right: 20px;
+			}
+			.company-reg{
+				border-bottom: 1px solid #ccc;
+			}
+			
+			/* 内容区-左侧 */
+			.left{
+				width: 50%;
+				float: left;
+			}
+			.form-wrap{
+				width: 400px;
+				margin: 0 auto;
+			}
+			/* 内容区-左侧-表单容器-表单项容器 */
+			.input-wrap{
+				position: relative;
+				width: 100%;
+				height: 54px;
+				border: 1px solid #ddd;
+			}
+			.input-wrap label{
+				height: 52px;
+				padding-left: 20px;
+				line-height: 52px;
+			}
+			.input-wrap [type="text"],.input-wrap [type="password"],.input-wrap [type="text"]:focus,.input-wrap [type="password"]:focus{
+				border: none;
+				outline: none;
+				width: 210px;
+				height: 52px;
+				line-height: 52px;
+				padding-left:20px ;
+				vertical-align: top;
+			}
+			.input-wrap .input-width-fix,.input-wrap .input-width-fix:focus{
+				width: 140px;
+			}
+			.input-wrap label{
+				display: inline-block;
+				width: 110px;
+				letter-spacing: 5px;
+			}
+			.input-wrap .letter-space-fix1{
+				letter-spacing: 0px;
+			}
+			/* 内容区-左侧-表单容器-表单项提示容器 */
+			.tip-wrap{
+				height: 37px;
+				padding-top: 5px;
+			}
+			/* 下拉列表 */
+			.dropdown{
+				position: absolute;
+				width: 100px;
+				height: 140px;
+				bottom: -140px;
+				left: 0px;
+				z-index: 6;
+				list-style: none;
+				border: 1px solid #c1c1c1;
+				background-color: #fff;
+				overflow: auto;
+			}
+			.dropdown li{
+				padding: 4px;
+				cursor: pointer;
+			}
+			.dropdown li:hover,.dropdown li.active{
+				background-color: #c1c1c1;
+			}
+			/* 图片验证码和手机验证码 */
+			.imgage-yzm-wrap,.msg-yzm-wrap{
+				height: 100%;
+				width: 114px;
+				padding: 2px;
+			}
+			.imgage-yzm-wrap img,.msg-yzm-wrap a{
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+			}
+			.msg-yzm-wrap a{
+				display: inline-block;
+				text-align: center;
+				line-height: 50px;
+				background-color: #f2f2f2;
+			}
+			/* 提交按钮 */
+			.submit{
+				width: 100%;
+				border: none;
+				line-height: 54px;
+				background-color: red;
+				color: #fff;
+			}
+			/* 底部  */
+			.footer{
+				width: 100%;
+				clear: both;
+				text-align: center;
+			}
+			.footer-con{
+				width: 1210px;
+				margin: 0 auto;
+				padding: 40px 0 30px 0;
+				border-top: 1px solid #ccc;
+			}
+			.f-list,.f-list li{
+				display: inline-block;
+			}
+			.f-list li{
+				padding: 0 10px;
+				border-right: 1px solid #ccc;
+			}
+			.f-list li:last-child{
+				border-right: 0;
+			}
+			.f-copy{
+				margin-top: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="logo-wrap">
+				<a class="logo"><img src="jdlogo.png"></a>
+				<div class="welcome">欢迎注册</div>
+				<div class="login-wrap">已有账号<a>请登录</a></div>
+			</div>
+		</div>
+		<!--内容区-->
+		<div class="content">
+			<!--*******************************      注册模块 begin     **************************************-->
+			<!--内容区-左侧表单-->
+			<div class="left">
+				<!--内容区-左侧表单-表单容器-->
+				<div class="form-wrap">
+					<!--内容区-左侧表单-表单容器-表单-->
+					<form>
+						<!--内容区-左侧表单-表单容器-表单-表单项容器-->
+						<div class="input-wrap">
+							<label>用&nbsp;户&nbsp;名</label><input type="text" placeholder="您的账户名和登录名"/>
+						</div>
+						<!--内容区-左侧表单-表单容器-表单-表单项提示容器-->
+						<div class="tip-wrap"></div>
+						
+						<div class="input-wrap">
+							<label>设置密码</label><input type="password" placeholder="建议至少使用两种字符组合"/>
+						</div>
+						<div class="tip-wrap"></div>
+						
+						<div class="input-wrap">
+							<label>确认密码</label><input type="password" placeholder="请再次输入密码"/>
+						</div>
+						<div class="tip-wrap"></div>
+						
+						<div class="input-wrap">
+							<label class="letter-space-fix1">中国+86&nbsp;<a id="dropdown-btn"><img src="arrow.png"></a></label>
+							<input type="text" placeholder="建议使用常用手机"/>
+							<!--下拉列表-->
+							<ul class="dropdown hide">
+								<li class="active">中国+86</li>
+								<li>香港+852</li>
+								<li>台湾+886</li>
+							</ul>
+						</div>
+						<div class="tip-wrap"></div>
+						
+						<div class="input-wrap">
+							<label>验&nbsp;证&nbsp;码</label><input type="text" class="input-width-fix" placeholder="请输入验证码"/>
+							<div class="imgage-yzm-wrap float-right">
+								<img src="yanzhengma.jpg" />
+							</div>
+						</div>
+						<div class="tip-wrap"></div>
+						
+						<div class="input-wrap">
+							<label class="letter-space-fix1">手机验证码</label><input type="text" class="input-width-fix" placeholder="请输入手机验证码"/>
+							<div class="msg-yzm-wrap float-right">
+								<a>获取验证码</a>
+							</div>
+						</div>
+						<div class="tip-wrap"></div>
+						
+						<div>
+							<input type="checkbox" name="agree" />我已阅读并同意<a href="#">京东用户注册协议</a>
+						</div>
+						<div class="tip-wrap"></div>
+						
+						<button class="submit" type="submit">立即注册</button>
+					</form>
+				</div>
+			</div>
+			<!--*******************************      注册模块 end      **************************************-->
+			<!--内容区-右侧-->
+			<div class="right">
+				<img src="meg.png">
+				<div class="company-reg">
+					<img src="company.png"><a>企业用户注册</a>
+				</div>
+				<div>
+					<img src="earch.png"><a>INTERNATIONAL<br>CUSTOMERS</a>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="footer">
+			<div class="footer-con">
+				<ul class="f-list">
+				<li><a>关于我们</a></li>
+				<li><a>联系我们</a></li>
+				<li><a>人才招聘</a></li>
+				<li><a>商家入驻</a></li>
+				<li><a>广告服务</a></li>
+				<li><a>手机京东</a></li>
+				<li><a>友情链接</a></li>
+				<li><a>销售联盟</a></li>
+				<li><a>友情链接</a></li>
+				<li><a>京东公益</a></li>
+				<li><a>English Site</a></li>
+			</ul>
+			<p class="f-copy">Copyright&copy;2004-2016  京东JD.com 版权所有 </p>
+			</div>
+			
+		</div>
+		<script>
+			// 下拉列表隐藏/显示方法
+			var dropBtn = document.querySelector("#dropdown-btn"),
+				drop = document.querySelector(".dropdown");
+			dropBtn.onclick = function(){
+				if(drop.className.indexOf("hide")>0){
+					drop.className ="dropdown";
+				}else{
+					drop.className += " hide";
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D-translate-饶点旋转</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: lightgray;
+        }
+        .content {
+            background-color: #53ad26;
+            color: #ffffff;
+            width: 160px;
+            height: 30px;
+        }
+        .perspective {
+            perspective: 2000px; /* 3D元素距视图的距离，此设定与y轴有关 */
+        }
+        /*
+            围绕坐标x=1、t=0、z=0的点与零点的连线旋转
+        */
+        .rotate3d1{
+            -webkit-transform: rotate3d(1, 0, 0, 45deg);
+            -moz-transform: rotate3d(1, 0, 0, 45deg);
+            -ms-transform: rotate3d(1, 0, 0, 45deg);
+            -o-transform: rotate3d(1, 0, 0, 45deg);
+            transform: rotate3d(1, 0, 0, 45deg);
+        }
+        .rotate3d2{
+            -webkit-transform: rotate3d(0, 1, 0, 45deg);
+            -moz-transform: rotate3d(0, 1, 0, 45deg);
+            -ms-transform: rotate3d(0, 1, 0, 45deg);
+            -o-transform: rotate3d(0, 1, 0, 45deg);
+            transform: rotate3d(0, 1, 0, 45deg);
+        }
+        .rotate3d3{
+            -webkit-transform: rotate3d(0, 0, 1, 45deg);
+            -moz-transform: rotate3d(0, 0, 1, 45deg);
+            -ms-transform: rotate3d(0, 0, 1, 45deg);
+            -o-transform: rotate3d(0, 0, 1, 45deg);
+            transform: rotate3d(0, 0, 1, 45deg);
+        }
+        .rotate3d4{
+            -webkit-transform: rotate3d(1, 1, 1, 45deg);
+            -moz-transform: rotate3d(1, 1, 1, 45deg);
+            -ms-transform: rotate3d(1, 1, 1, 45deg);
+            -o-transform: rotate3d(1, 1, 1, 45deg);
+            transform: rotate3d(1, 1, 1, 45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container perspective">
+        <div class="content rotate3d1">rotate3d</div>
+    </div>
+    <div class="container perspective">
+        <div class="content rotate3d2">rotate3d</div>
+    </div>
+    <div class="container perspective">
+        <div class="content rotate3d3">rotate3d</div>
+    </div>
+    <div class="container perspective">
+        <div class="content rotate3d4">rotate3d</div>
+    </div>
+    <pre>
+        finished  in 6.transform-style.
+    </pre>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tra-2</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: lightgray;
+        }
+        .content {
+            background-color: #53ad26;
+            color: #ffffff;
+            width: 250px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        .transform1 {
+            -webkit-transform: translate(50%) rotate(45deg);
+            -moz-transform: translate(50%) rotate(45deg);
+            -ms-transform: translate(50%) rotate(45deg);
+            -o-transform: translate(50%) rotate(45deg);
+            transform: translate(50%) rotate(45deg);
+        }
+        .transform2 {
+            -webkit-transform: rotate(45deg) translate(50%);
+            -moz-transform: rotate(45deg) translate(50%);
+            -ms-transform: rotate(45deg) translate(50%);
+            -o-transform: rotate(45deg) translate(50%);
+            transform: rotate(45deg) translate(50%);
+        }
+    </style>
+</head>
+<body>
+    <h2>一个元素多种变形的方法</h2>
+    <div class="container">
+        <div class="content transform1">transform1-移动50%、旋转45°</div>
+    </div>
+    <div class="container">
+        <div class="content transform2">transform2-旋转45°、移动50%</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tra-1</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: lightgray;
+        }
+        .content {
+            background-color: #53ad26;
+            color: #ffffff;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;/*设定行高与边框高度一直，字体自动垂直居中*/
+        }
+        .rotate {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+        }
+        .translate {
+            transform: translate(100px);
+            -webkit-transform: translate(100px);
+            -moz-transform: translate(100px);
+            -ms-transform: translate(100px);
+            -o-transform: translate(100px);
+        }
+        .translateY {
+            transform: translateY(40px);
+            -webkit-transform: translateY(40px);
+            -moz-transform: translateY(40px);
+            -ms-transform: translateY(40px);
+            -o-transform: translateY(40px);
+        }
+        .scale {
+            transform: scale(2);
+            -webkit-transform: scale(2);
+            -moz-transform: scale(2);
+            -ms-transform: scale(2);
+            -o-transform: scale(2);
+        }
+        .scaleX {
+            transform: scaleX(2);
+            -webkit-transform: scaleX(2);
+            -moz-transform: scaleX(2);
+            -ms-transform: scaleX(2);
+            -o-transform: scaleX(2);
+        }
+        .skew {
+            -webkit-transform: skew(20deg, 30deg);
+            -moz-transform: skew(20deg, 30deg);
+            -ms-transform: skew(20deg, 30deg);
+            -o-transform: skew(20deg, 30deg);
+            transform: skew(20deg, 30deg);
+        }
+        .skewY {
+            -webkit-transform: skewY(30deg);
+            -moz-transform: skewY(30deg);
+            -ms-transform: skewY(30deg);
+            -o-transform: skewY(30deg);
+            transform: skewY(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content rotate">rotate-旋转</div>
+    </div>
+    <div class="container">
+        <div class="content translate">translate-移动</div>
+    </div>
+    <div class="container">
+        <div class="content translateY">translateY</div>
+    </div>
+    <div class="container">
+        <div class="content scale">scale-缩放</div>
+    </div>
+    <div class="container">
+        <div class="content scaleX">scaleX</div>
+    </div>
+    <div class="container">
+        <div class="content skew">skew-倾斜</div>
+    </div>
+    <div class="container">
+        <div class="content skewY">skewY</div>
+    </div>
+</body>
+</html>

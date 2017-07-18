@@ -1,0 +1,200 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+/* 整体布局 */
+.container{
+    position: relative;
+    width: 730px;
+    height: 1323px;
+    margin: 0 auto;
+    padding: 100px 0 164px 0;
+    background-color: #ecedf1;
+}
+.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 23px;
+}
+.content {
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 23px;
+}
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 154px;
+    padding: 0 23px;
+}
+/* top及后代元素 */
+.top {
+    background-color: #12b8f6;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+.back {
+    float: left;
+    line-height: 100px;
+}
+.back>span {
+    font-size: 48px;
+    margin-right: 10px;
+    vertical-align: sub;
+}
+.top>p {
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 23px;
+    line-height: 1.4;
+}
+.top>p>span {
+    font-size: 28px;
+}
+.info {
+    float: right;
+    line-height: 100px;
+}
+.info>img {
+    vertical-align: middle;
+}
+
+/* content及后代元素 */
+.content li {
+    display: block;
+    clear: both;
+    padding: 15px 0;
+    font-size: 30px;
+}
+.chat-a {
+    float: right;
+}
+.chat-a .user-wrap {
+    float: right;
+    margin-left: 6px;
+    margin-top: 16px;
+}
+.chat-a .user-text {
+    float: right;
+    padding: 46px 49px 31px 23px;
+    color: #7a6c3f;
+    border-image: url("../images/bg-note.png") 46 49 31 23 / 46px 49px 31px 23px;
+    -webkit-border-image: url("../images/bg-note.png") 46 49 31 23 / 46px 49px 31px 23px;
+    -moz-border-image: url("../images/bg-note.png") 46 49 31 23 / 46px 49px 31px 23px;
+}
+.chat-a .user-text * {
+    background-color: #eadab8;
+}
+.chat-b {
+    float: left;
+}
+.chat-b .user-wrap {
+    float: left;
+    margin-right: 6px;
+    margin-top: 16px;
+}
+.chat-b .user-text{
+    float: left;
+    padding: 31px 62px 48px 39px;
+    color: #333;
+    border-image: url("../images/bg-wave.png") 31 62 48 39 / 31px 62px 48px 39px;
+    -webkit-border-image: url("../images/bg-wave.png") 31 62 48 39 / 31px 62px 48px 39px;
+    -moz-border-image: url("../images/bg-wave.png") 31 62 48 39 / 31px 62px 48px 39px;
+}
+.chat-b .user-text *{
+    background: linear-gradient(#b9e4f7, #b6e0f8);
+}
+.user-wrap img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* bottom及后代元素 */
+.send-wrap {
+    font-size: 30px;
+}
+.send-wrap>input,.send-wrap>input:focus {
+    background-color: #fff;
+    padding: 0 10px;
+    line-height: 70px;
+    font-size: 30px;
+    width: 560px;
+    border: 1px solid #e8e9ed;
+    border-radius: 8px;
+    outline:none;
+}
+.send-btn {
+    float: right;
+    display: inline-block;
+    line-height: 70px;
+    padding: 0 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #dddee2;
+    color: #fff;
+}
+.tool-wrap {
+    margin-top: 22px;;
+    text-align: center;
+}
+.tool-wrap li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 50px;
+}
+.tool-wrap li:last-child {
+    margin-right: 0;
+}
+.tool-wrap a {
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("../images/qq-talk.png");
+    background-repeat: no-repeat;
+}
+.voice {
+    width: 42px;
+    height: 57px;
+    background-position: -37px -1164px;
+}
+.video {
+    width: 54px;
+    height: 43px;
+    background-position: -132px -1168px;
+}
+.pic {
+    width: 46px;
+    height: 43px;
+    background-position: -237px -1168px;
+}
+.photo {
+    width: 51px;
+    height: 44px;
+    background-position: -336px -1166px;
+}
+.gift {
+    width: 38px;
+    height: 46px;
+    background-position: -443px -1166px;
+}
+.expression {
+    width: 50px;
+    height: 51px;
+    background-position: -537px -1164px;
+}
+.more {
+    width: 50px;
+    height: 51px;
+    background-position: -638px -1164px;
+}
