@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D-translate-保留空间</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: lightgray;
+        }
+        .content {
+            background-color: #53ad26;
+            color: #ffffff;
+            width: 160px;
+            height: 30px;
+        }
+        .perspective {
+            perspective: 2000px; /* 3D元素距视图的距离，此设定与y轴有关 */
+        }
+        /*
+            flat 默认扁平化，不保留控件
+            preserve-3d 保留3d空间
+        */
+        .rotateX{
+            -webkit-transform: rotateX(45deg);
+            -moz-transform: rotateX(45deg);
+            -ms-transform: rotateX(45deg);
+            -o-transform: rotateX(45deg);
+            transform: rotateX(45deg);
+        }
+        .rotateY {
+            -webkit-transform: rotateY(45deg);
+            -moz-transform: rotateY(45deg);
+            -ms-transform: rotateY(45deg);
+            -o-transform: rotateY(45deg);
+            transform: rotateY(45deg);
+            width: 100px;
+            height: 30px;
+            background-color: #53ad26;
+        }
+        .flat {
+            -webkit-transform-style: flat;
+            -moz-transform-style: flat;
+            -ms-transform-style: flat;
+            transform-style: flat;
+        }
+        .preserve-3d {
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container perspective">
+        <div class="content rotateX">
+            <div class="rotateY"></div>
+        </div>
+    </div>
+    <div class="container perspective">
+        <div class="content rotateX flat">
+            <div class="rotateY"></div>
+        </div>
+    </div>
+    <div class="container perspective">
+        <div class="content rotateX preserve-3d">
+            <div class="rotateY"></div>
+        </div>
+    </div>
+
+</body>
+</html>

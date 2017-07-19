@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>backface-visibility</title>
+    <title>3D-translate-visible-2</title>
     <style>
-        .content{width: 600px;height: 100px;margin:20px auto;background-color: lightgray;}
-        .perspective{perspective: 2000px;}
-        .rotateX{
+        .content {
+            background-color: lightgray;
+            width: 600px;
+            height: 100px;
+            margin: 20px auto;
+        }
+        .perspective {
+            perspective: 2000px; /* 3D元素距视图的距离，此设定与y轴有关 */
+        }
+        /*
+            鼠标移动观察相应的元素变换
+        */
+        .rotateX {
             -webkit-transform: rotateX(135deg);
             -moz-transform: rotateX(135deg);
             -ms-transform: rotateX(135deg);
             -o-transform: rotateX(135deg);
             transform: rotateX(135deg);
         }
-        .rotateX:hover{
+        /* 增加鼠标悬停时的效果 */
+        .rotateX:hover {
             -webkit-transform: rotateX(45deg);
             -moz-transform: rotateX(45deg);
             -ms-transform: rotateX(45deg);
             -o-transform: rotateX(45deg);
             transform: rotateX(45deg);
         }
-        .content>div{
+        .content>div {
             backface-visibility: visible;
             position: absolute;
             width: 100px;
@@ -29,30 +40,33 @@
             top: 0;
             left: 0;
         }
-        .f-c{
+        .text-center {
+            text-align: center;
+        }
+        .f-c {
             -webkit-transform: rotate(180deg);
             -moz-transform: rotate(180deg);
             -ms-transform: rotate(180deg);
             -o-transform: rotate(180deg);
             transform: rotate(180deg);
         }
-        .s-c{
+        .s-c {
             -webkit-transform: none;
             -moz-transform: none;
             -ms-transform: none;
             -o-transform: none;
             transform: none;
         }
-        .text-center{text-align: center}
+
     </style>
 </head>
 <body>
-<div class="perspective">
-    <p class="text-center">鼠标移到下面的色块来看看效果吧</p>
-    <div class="content rotateX">
-        <div class="f-c">first-child</div>
-        <div class="s-c">second-child</div>
+    <div class="perspective">
+        <p class="text-center">鼠标移动到下面的色块瞅瞅效果</p>
+        <div class="content rotateX">
+            <div class="f-c">first-child</div>
+            <div class="s-c">second-child</div>
+        </div>
     </div>
-</div>
 </body>
 </html>
