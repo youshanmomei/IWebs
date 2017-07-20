@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition-property</title>
+    <style>
+        .text-center {
+            text-align: center;
+        }
+        .container {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: lightgray;
+            position: relative;
+        }
+        /* 设置过渡时间为2秒 */
+        .container>p {
+            -webkit-transition-duration: 2s;
+            -moz-transition-duration: 2s;
+            -ms-transition-duration: 2s;
+            -o-transition-duration: 2s;
+            transition-duration: 2s;
+
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0px;
+            margin: 0px;
+        }
+        .container:hover .transition-property{
+            bottom: 500px;
+            color: #ffffff;
+            background-color: green;
+        }
+        p.p1 {
+            left: 0;
+            -webkit-transition-property: none;
+            -moz-transition-property: none;
+            -ms-transition-property: none;
+            -o-transition-property: none;
+            transition-property: none;
+        }
+        p.p2 {
+            left: 150px;
+            -webkit-transition-property: all;
+            -moz-transition-property: all;
+            -ms-transition-property: all;
+            -o-transition-property: all;
+            transition-property: all;
+        }
+        p.p3 {
+            left: 300px;
+            -webkit-transition-property: bottom;
+            -moz-transition-property: bottom;
+            -ms-transition-property: bottom;
+            -o-transition-property: bottom;
+            transition-property: bottom;
+        }
+        p.p4 {
+            left: 450px;
+            -webkit-transition-property: bottom, color;
+            -moz-transition-property: bottom, color;
+            -ms-transition-property: bottom, color;
+            -o-transition-property: bottom, color;
+            transition-property: bottom, color;
+        }
+    </style>
+</head>
+<body>
+    <p class="text-center">鼠标hover（悬停）灰色区域，瞅瞅有什么效果</p>
+    <div class="container">
+        <p class="p1 transition-property">none</p>
+        <p class="p2 transition-property">all</p>
+        <p class="p3 transition-property">bottom</p>
+        <p class="p4 transition-property">bottom, color</p>
+    </div>
+    <pre>
+        最基本的transation的用法。
+
+        transition-property:all; //所有属性都有过渡效果
+        transition-property:bottom; //bottom有过渡效果，即滑动的时候有效果，字体颜色，背景颜色这些倒是没有效果
+        transition-property:bottom, color; //bottom与color有过渡效果
+    </pre>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition-function</title>
+    <style>
+        .text-center {
+            text-align: center;
+        }
+        .container {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: lightgray;
+            position: relative;
+        }
+        /*
+            设置过渡时间
+         */
+        .container>p {
+            transition-duration: 2s;
+
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0px;
+            margin: 0px;
+        }
+        .container:hover .transition-timing-function{
+            bottom: 500px;
+            color: #ffffff;
+            background-color: green;
+        }
+        p.p1 {
+            left: 0;
+            transition-timing-function: ease;
+        }
+        p.p2 {
+            left: 150px;
+            transition-timing-function: linear;
+        }
+        p.p3 {
+            left: 300px;
+            transition-timing-funtion: ease-in;
+        }
+        p.p4 {
+            left: 450px;
+            transition-timing-function: ease-out;
+        }
+        p.p5 {
+            left: 600px;
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <p class="text-center">鼠标hover（悬停）灰色区域，瞅瞅有什么效果</p>
+    <div class="container">
+        <p class="p1 transition-timing-function">ease</p>
+        <p class="p2 transition-timing-function">linear</p>
+        <p class="p3 transition-timing-function">ease-in</p>
+        <p class="p4 transition-timing-function">ease-out</p>
+        <p class="p5 transition-timing-function">ease-in-out</p>
+    </div>
+    <pre>
+        过渡时间函数的用法。确切的说应该是过渡时间效果函数，两头快中间慢，中间快两头慢，亦或其它云云。
+
+        ease 默认值，开始与结束时较慢，中间较快
+        linear 匀速
+        ease-in 开始时慢
+        ease-out 结束时慢
+        ease-in-out 开始与结束时慢，中间快
+    </pre>
+</body>
+</html>

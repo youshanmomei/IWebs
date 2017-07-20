@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition-综合</title>
+    <style>
+        .text-center {
+            text-align: center;
+        }
+        .container {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: lightgray;
+            position: relative;
+        }
+        /*
+            将所有属性写在一个transition表达式中
+         */
+        .container>p {
+            transition-duration: 2s;
+
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0px;
+            margin: 0px;
+        }
+        .container:hover .transition{
+            bottom: 500px;
+            color: #ffffff;
+            background-color: green;
+        }
+        p.p1 {
+            left: 0;
+            transition: none;
+        }
+        p.p2 {
+            left: 150px;
+            transition: bottom 2s ease 1s, color 2s;
+        }
+        p.p3 {
+            left: 300px;
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <p class="text-center">鼠标hover（悬停）灰色区域，瞅瞅有什么效果</p>
+    <div class="container">
+        <p class="p1 transition">none</p>
+        <p class="p2 transition">综合运用</p>
+        <p class="p3 transition">过渡2秒</p>
+    </div>
+    <pre>
+        transition是所有四个过渡属性的缩写，即这四个属性可以写到同一个属性表达中：
+        transition: none; //无过渡效果
+        transition: bottom 2s ease 1s, color 2s; //bottom过渡时间为2秒，过渡效果为ease，过渡延时为1秒，color的过渡时间为2秒
+        transition: 2s; //过渡时间为2s
+
+        ps.bottom: 该属性规定了底部边缘。定义了元素下外边距边界与其包含块下边界之间的偏移。
+    </pre>
+</body>
+</html>
